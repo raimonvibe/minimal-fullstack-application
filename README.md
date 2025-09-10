@@ -1,74 +1,36 @@
-# Minimal Full-Stack Example (Next.js + SQLite)
-
-![App Screenshot](./screenshot.png)
-
-This is a minimalistic full-stack application built with **Next.js**, **Prisma**, and **SQLite**.  
-It demonstrates how frontend, backend, and a database can work together in one project.
-
----
-
-## Features
-- ✅ Add todos
-- ✅ List todos
-- ✅ Toggle todo as done/undone
-- ✅ Data stored in SQLite using Prisma ORM
-- ✅ Minimal API routes in Next.js
-
----
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
-### 1. Create project
-```bash
-npx create-next-app@latest minimal-fullstack --typescript --eslint
-cd minimal-fullstack
-npm i @prisma/client prisma
-npx prisma init --datasource-provider sqlite
-```
+First, run the development server:
 
-### 2. Database setup
-Edit `prisma/schema.prisma` to define a simple `Todo` model, then run:
-```bash
-npx prisma migrate dev --name init
-```
-
-### 3. API routes
-The backend routes live inside `app/api/todos/route.ts`.  
-They allow you to:
-- `GET /api/todos` → fetch all todos
-- `POST /api/todos` → add a new todo
-- `PATCH /api/todos` → toggle a todo done/undone
-
-### 4. Frontend
-Replace `app/page.tsx` with a minimal React component to display and manage todos.
-
-### 5. Run locally
 ```bash
 npm run dev
-# open http://localhost:3000
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
----
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Screenshot
-The app looks like this:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-![Todo App Screenshot](./screenshot.png)
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
----
+## Learn More
 
-## Stack
-- [Next.js](https://nextjs.org/) – frontend + backend framework
-- [Prisma](https://www.prisma.io/) – database ORM
-- [SQLite](https://sqlite.org/) – simple file-based database
+To learn more about Next.js, take a look at the following resources:
 
----
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-## Optional Improvements
-- 🔑 Add authentication (e.g., NextAuth with Google login)
-- ☁️ Deploy to Vercel
-- 🗂 Add user-specific todos
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
----
+## Deploy on Vercel
 
-Made as a learning project for a **minimal full-stack app**. 🚀
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
